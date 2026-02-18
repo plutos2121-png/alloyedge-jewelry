@@ -3,44 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALLOYEDGE - Jewelry</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<title>ALLOYEDGE Jewelry</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
 body{
     margin:0;
     font-family:'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #fce4ec, #f8bbd0);
-    color:#444;
+    background: linear-gradient(135deg, #ffe6f0, #e8f5e9);
+    overflow-x:hidden;
+}
+
+/* Gjethe dekorative */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:url('logo.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:600px;
+    opacity:0.05;
+    z-index:-1;
 }
 
 header{
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(10px);
-    padding:20px 50px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
     position:fixed;
     width:100%;
-    z-index:1000;
 }
 
 header img{
-    height:60px;
+    height:55px;
 }
 
 nav a{
-    margin-left:25px;
     text-decoration:none;
+    margin-left:30px;
     color:#b76e79;
     font-weight:500;
     transition:0.3s;
 }
 
 nav a:hover{
-    color:#8e3b46;
+    color:#2e7d32;
 }
 
 .hero{
@@ -49,76 +63,62 @@ nav a:hover{
     align-items:center;
     justify-content:center;
     text-align:center;
-    background-image: url('logo.png');
-    background-size:cover;
-    background-position:center;
-    position:relative;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(255,255,255,0.7);
-}
-
-.hero-content{
-    position:relative;
-    max-width:600px;
+    padding:0 20px;
 }
 
 .hero h1{
     font-family:'Playfair Display', serif;
-    font-size:48px;
-    color:#b76e79;
+    font-size:56px;
+    background: linear-gradient(to right, #b76e79, #2e7d32);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    font-size:18px;
+    font-size:20px;
     margin:20px 0;
+    color:#555;
 }
 
 .btn{
-    background:#b76e79;
-    color:white;
-    padding:12px 30px;
+    padding:14px 35px;
+    border-radius:40px;
     border:none;
-    border-radius:30px;
-    cursor:pointer;
     font-size:16px;
-    transition:0.3s;
+    cursor:pointer;
+    background:linear-gradient(to right, #b76e79, #2e7d32);
+    color:white;
+    transition:0.4s;
 }
 
 .btn:hover{
-    background:#8e3b46;
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 .section{
-    padding:80px 10%;
+    padding:100px 10%;
     text-align:center;
 }
 
 .section h2{
     font-family:'Playfair Display', serif;
-    font-size:36px;
+    font-size:40px;
     color:#b76e79;
 }
 
 .products{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:30px;
-    margin-top:40px;
+    gap:40px;
+    margin-top:50px;
 }
 
 .card{
     background:white;
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
     transition:0.4s;
 }
 
@@ -128,18 +128,24 @@ nav a:hover{
 
 .card img{
     width:100%;
-    border-radius:15px;
+    border-radius:20px;
 }
 
 .card h3{
-    color:#b76e79;
+    color:#2e7d32;
 }
 
 footer{
-    background:#b76e79;
+    background:linear-gradient(to right, #b76e79, #2e7d32);
     color:white;
+    padding:40px;
     text-align:center;
-    padding:30px;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:36px;
+    }
 }
 
 </style>
@@ -158,9 +164,9 @@ footer{
 </header>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>Elegancë për çdo vajzë ✨</h1>
-        <p>Bizhuteri delikate, moderne dhe plot shkëlqim për stilin tënd unik.</p>
+    <div>
+        <h1>Shkëlqe çdo ditë ✨</h1>
+        <p>Bizhuteri elegante dhe moderne për vajza që duan stil, feminitet dhe vetëbesim.</p>
         <button class="btn">Shiko Koleksionin</button>
     </div>
 </section>
@@ -169,19 +175,17 @@ footer{
     <h2>Koleksioni Ynë</h2>
     <div class="products">
         <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="">
+            <img src="https://via.placeholder.com/300x300">
             <h3>Vathë Elegant</h3>
             <p>19.99€</p>
         </div>
-
         <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="">
+            <img src="https://via.placeholder.com/300x300">
             <h3>Qafore Delikate</h3>
             <p>24.99€</p>
         </div>
-
         <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="">
+            <img src="https://via.placeholder.com/300x300">
             <h3>Unazë Minimaliste</h3>
             <p>17.99€</p>
         </div>
@@ -190,7 +194,7 @@ footer{
 
 <section class="section" id="rreth">
     <h2>Rreth ALLOYEDGE</h2>
-    <p>ALLOYEDGE është një brand modern për vajza të reja që duan stil, elegancë dhe shkëlqim në çdo moment. Çdo bizhuteri është zgjedhur me kujdes për të reflektuar bukurinë dhe vetëbesimin.</p>
+    <p>ALLOYEDGE është një dyqan online bizhuterish për vajza të reja që duan të ndihen elegante dhe të sigurta. Çdo model është i përzgjedhur me kujdes për të sjellë stil modern dhe finesë.</p>
 </section>
 
 <section class="section" id="kontakt">
@@ -200,7 +204,7 @@ footer{
 </section>
 
 <footer>
-    © 2026 ALLOYEDGE Jewelry | Të gjitha të drejtat e rezervuara
+© 2026 ALLOYEDGE Jewelry | Të gjitha të drejtat e rezervuara
 </footer>
 
 </body>
