@@ -1,145 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALLOYEDGE Jewelry</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Montserrat', sans-serif;
-    background:linear-gradient(160deg,#f4c6dc,#0e2f24);
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    text-align:center;
-}
-
-/* MAIN CONTAINER */
-.container{
-    width:90%;
-    max-width:400px;
-}
-
-/* TITLE */
-h1{
-    font-family:'Playfair Display', serif;
-    font-size:42px;
-    letter-spacing:8px;
-}
-
-.subtitle{
-    margin-top:15px;
-    font-size:14px;
-    letter-spacing:3px;
-    opacity:0.85;
-}
-
-/* BUTTON */
-.order-btn{
-    margin-top:50px;
-    padding:15px;
-    width:100%;
-    border:1px solid white;
-    background:transparent;
-    color:white;
-    letter-spacing:3px;
-    font-size:14px;
-    cursor:pointer;
-    transition:0.4s;
-}
-
-.order-btn:hover{
-    background:white;
-    color:#0e2f24;
-}
-
-/* POPUP */
-.popup{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:#111;
-    padding:40px 20px;
-    border-top-left-radius:20px;
-    border-top-right-radius:20px;
-    display:none;
-}
-
-.popup h3{
-    margin-bottom:25px;
-    letter-spacing:3px;
-}
-
-.popup a{
-    display:block;
-    color:#f4c6dc;
-    font-size:16px;
-    margin:15px 0;
-    text-decoration:none;
-}
-
-.popup a:hover{
-    color:white;
-}
-
-.close{
-    position:absolute;
-    top:15px;
-    right:25px;
-    font-size:20px;
-    cursor:pointer;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>AlloyEdge | Jewelry for Women</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
-    <h1>ALLOYEDGE</h1>
-    <div class="subtitle">FEMININE JEWELRY</div>
+  <header>
+    <h1>AlloyEdge</h1>
+    <p>Elegancë që shkëlqen ✨</p>
+    <nav>
+      <a href="#about">Rreth Nesh</a>
+      <a href="#products">Produktet</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
 
-    <button class="order-btn" onclick="openPopup()">ORDER NOW</button>
-</div>
+  <section id="hero">
+    <h2>Zbulo Koleksionin Tonë</h2>
+    <button onclick="scrollToProducts()">Shiko Produktet</button>
+  </section>
 
-<div class="popup" id="popup">
-    <div class="close" onclick="closePopup()">✕</div>
-    <h3>ORDER VIA</h3>
+  <section id="products">
+    <h2>Koleksioni</h2>
+    <div class="product-container">
+      <div class="product">
+        <img src="https://via.placeholder.com/250" alt="Varëse">
+        <h3>Varëse Elegant</h3>
+        <p>€25</p>
+      </div>
 
-    <a href="https://www.instagram.com/alloyedge.jewelry" target="_blank">
-        Instagram @alloyedge.jewelry
-    </a>
+      <div class="product">
+        <img src="https://via.placeholder.com/250" alt="Vathë">
+        <h3>Vathë Modern</h3>
+        <p>€18</p>
+      </div>
 
-    <a href="https://www.tiktok.com/@alloyedge.jewelry" target="_blank">
-        TikTok @alloyedge.jewelry
-    </a>
-</div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250" alt="Byzylyk">
+        <h3>Byzylyk Luksoz</h3>
+        <p>€30</p>
+      </div>
+    </div>
+  </section>
 
-<script>
-function openPopup(){
-    document.getElementById("popup").style.display="block";
-}
+  <section id="about">
+    <h2>Rreth AlloyEdge</h2>
+    <p>AlloyEdge ofron bizhuteri elegante dhe moderne për femra që duan të shkëlqejnë çdo ditë.</p>
+  </section>
 
-function closePopup(){
-    document.getElementById("popup").style.display="block";
-    document.getElementById("popup").style.animation="slideUp 0.4s ease";
-}
+  <section id="contact">
+    <h2>Na Kontakto</h2>
+    <p>Email: info@alloyedge.com</p>
+    <p>Instagram: @alloyedge</p>
+  </section>
 
-function closePopup(){
-    document.getElementById("popup").style.display="none";
-}
-</script>
+  <footer>
+    <p>© 2026 AlloyEdge. Të gjitha të drejtat e rezervuara.</p>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f6f2;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+#hero {
+  padding: 60px;
+  background: linear-gradient(to right, #d4af37, #f5e6c4);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+function scrollToProducts() {
+  document.getElementById("products").scrollIntoView({ 
+    behavior: "smooth" 
+  });
+}
