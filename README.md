@@ -159,8 +159,8 @@ footer {
 
 <section id="contact">
   <h2>Na Kontakto</h2>
-  <p>Email: info@alloyedge.com</p>
-  <p>Instagram: @alloyedge</p>
+  <p>tik tok: @alloyedge.jewelry</p>
+  <p>Instagram: @alloyedge.jewelry</p>
 </section>
 
 <footer>
