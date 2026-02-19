@@ -132,10 +132,11 @@ footer {
   <div class="products">
 
     <div class="product">
-      <img src="https://via.placeholder.com/250" alt="Varëse">
-      <h3>Varëse Rozë</h3>
-      <p>€25</p>
-    </div>
+  <img src="images/IMG_2688.jpeg" alt="Varse">
+  <h3>Varse</h3>
+  <p>€15</p>
+</div>
+    
 
     <div class="product">
       <img src="https://via.placeholder.com/250" alt="Vathë">
